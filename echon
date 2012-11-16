@@ -1,0 +1,24 @@
+#!/bin/sh
+
+function echon_2()
+{
+    echo "$*"
+}
+
+function echon_0()
+{
+  echo "$*" | awk '{ printf "%s" $0 }'
+}
+#You may prefer to avoid the overhead incurred when calling the awk command, however, and if you have a user-level command called printf you can use it instead:
+function echon_1()
+{
+  printf "%s" "$*"
+}
+#But what if you don't have printf and you don't want to call awk? Then use the tr command:
+function echon()
+{
+  echo "$*" | tr -d '\n'
+}
+
+#echon  "$*"
+
