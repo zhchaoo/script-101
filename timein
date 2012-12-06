@@ -31,7 +31,10 @@ elif [ "$1" = "list" ] ; then
 else
 
   region="$(dirname $1)"
+
   zone="$(basename $1)"
+
+  echo "$region $zone"
 
   # Is it a direct match? If so, we're good to go. Otherwise we need
   # to dig around a bit to find things. Start by just counting matches.
