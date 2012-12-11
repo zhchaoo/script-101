@@ -25,10 +25,13 @@ M="$(scriptbc -p 8 $P \* \($J / \(1 - \(1 + $J\) \^ -$N\) \) )"
 dollars="$(echo $M | cut -d. -f1)"
 cents="$(echo $M | cut -d. -f2 | cut -c1-2)"
 
+amount="$(scriptbc -p 2 $N \* $dollars.$cents )"
+interest="$(scriptbc -p 2 $amount - $P )"
+
 cat << EOF
 A $L year loan at $I% interest with a principal amount of ￥$(nicenumber $P 1 )
 results in a payment of ￥$dollars.$cents each month for the duration of
-the loan ($N payments).
+the loan ($N payments). the total interest is ￥$(nicenumber $interest 1 )
 EOF
 
 exit 0
