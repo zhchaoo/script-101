@@ -17,7 +17,7 @@ trap "rm -f $tempfile $changerequests" EXIT HUP INT QUIT TERM
 
 # Include the ansi color sequence definitions
 
-. script-library.sh
+. library.sh
 initializeANSI
 
 getfix()
