@@ -8,7 +8,7 @@
 #
 # Users typically enter P, I (annual interest rate), and L (length, years)
 
-. library.sh
+. library/utility
 
 if [ $# -ne 3 ] ; then
   echo "Usage: $0 principal interest loan-duration-years" >&2

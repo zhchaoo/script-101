@@ -26,5 +26,5 @@ initializeANSI()
 
 echon()
 {
-    echo '$*' | tr -d '\n'
+    echo "$*" | tr -d '\n'
 }

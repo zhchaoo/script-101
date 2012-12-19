@@ -6,7 +6,7 @@ guess=0                               # guessed by player
 guesses=0                             # number of guesses made
 number=$(($$ % $biggest)              # random number, between 1 and $biggest
 
-. library.sh
+. library/utility
 
 while [ $guess -ne $number ] ; do
   echon "Guess $number? " ; read answer

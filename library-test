@@ -2,8 +2,7 @@
 
 # Library test script
 
-. echon
-. library.sh
+. library/utility
 
 initializeANSI
 
